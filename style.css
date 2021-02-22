@@ -2,3 +2,165 @@
 ** FICHIER DE STYLE DU SITE DE RESERVIA
 ** @AUTEUR Jérémy ANGELE
 */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
+
+
+/* CORPS */
+body {
+  font-family: "Raleway", "Sans serif";
+  margin: 0;
+}
+
+#main_wrapper
+{
+    width: 1200px;
+    margin: auto;
+}
+
+/* Header */
+
+header
+{
+    display: flex;
+    align-items: center;
+    max-width: 1440px;
+    margin: auto;
+}
+
+#logo{
+    padding: 0 2rem;
+}
+
+/* Navigation */
+
+.nav ul
+{   
+    list-style-type: none;
+    display: flex;
+}
+
+.nav li
+{   
+    padding: 2.5em;
+    font-weight: 500;
+}
+
+
+/* bouton s'inscrire */
+
+.inscription{
+    font-weight: 700;
+    padding: 2.5em;
+}
+
+.inscription:hover {
+    color:#0065FC;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+/* responsive */
+
+@media only screen and (min-width: 768px){
+
+    .nav{
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .nav ul
+    {   
+        margin : 0;
+    }
+
+    .nav.active.on {
+        border-top: 3px #0065FC solid;  
+    }
+
+    .nav.active.on a{
+        color: #0065FC;    
+    }
+
+    .nav.active.off {
+        border-top: 3px #F2F2F2 solid;  
+    }
+
+    .nav.active.off a {
+        color: #000000;  
+    }
+    
+    .nav.active.off:active {
+        border-top: 3px #0065FC solid;
+        color: #0065FC;  
+    }
+
+    .nav.active.off a:active {
+        color: #0065FC;  
+    }
+
+
+}
+
+@media only screen and (max-width: 767px){
+    
+    header{
+        display: block;
+    }
+
+    
+    #logo{
+        padding: 2rem;
+    }
+
+    .nav ul
+    {   
+        padding : 0;
+    }
+
+    .nav li
+    {   
+        padding: 0;
+        font-weight: 500;
+        border-top: 3px #ffffff solid;
+        width: 50%;
+        height: 20px;
+        text-align: center;
+    }
+
+    .nav.active.on {
+        border-bottom: 3px #0065FC solid;  
+    }
+
+    .nav.active.on a {
+        color: #0065FC;  
+    }
+
+    .nav.active.off {
+        border-bottom: 3px #F2F2F2 solid;  
+    }
+   
+    .nav.active.off:active {
+        border-bottom: 3px #0065FC solid;
+    }
+
+    .nav.active.off a:active {
+        color: #0065FC;  
+    }
+
+    .nav.active.off a {
+        color: #0065FC;  
+    }
+    
+
+    .inscription{
+        position: absolute;
+        top: 0.6em;
+        right: 0.6em;
+        font-weight: 700;
+        color:#0065FC;
+    }
+}
