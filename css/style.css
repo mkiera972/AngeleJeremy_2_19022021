@@ -1,0 +1,406 @@
+/**
+** FICHIER DE STYLE DU SITE DE RESERVIA
+** @AUTEUR Jérémy ANGELE
+*/
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
+
+body{
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    font-family: "Raleway", "Sans serif";
+}
+
+/* Header */
+.header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+}
+
+#main_wrapper{
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+}
+
+
+/* Navigation */
+.nav ul
+{   
+    list-style-type: none;
+    display: flex;
+}
+
+.nav li
+{   
+    font-weight: 500;
+    padding: 2em;
+}
+
+/* bouton s'inscrire */
+
+.inscription{
+    font-weight: 700;
+    padding: 2em;
+}
+
+.inscription:hover {
+    color:#0065FC;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* FORMULAIRE */
+form{
+    display: flex;
+    height: 45px;
+    margin-bottom: 20px;
+}
+
+.icon_mapMarker{
+    width: 45px;
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #F2F2F2;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.inputSearch{
+    border: 1px solid #F2F2F2;
+    font-weight: 700;
+    font-size: 1em;
+    padding-left: 10px;
+    width: 200px;
+}
+
+.submitForm{ 
+    background-color: #0065FC;
+    border: 1px solid #0065FC;
+    border-radius: 0px 10px 10px 0px;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1em;
+    width: 110px;
+}
+
+.submitForm.Mobile{
+    display: none;
+}
+
+/*Bouton filtres*/
+.filtres{
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.row.twoFilter{
+    display: flex;
+}
+
+.row.threeFilter{
+    display: flex;
+}
+
+.filtres h2{
+    margin-right: 30px;
+}
+
+.btnFilter{
+    background-color: #ffffff;
+    border: 2px solid #F2F2F2;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.btnFilter:hover{
+    background-color: #0065FC;
+    transform: scale(1.015);
+    color: #ffffff;
+}
+
+.btnFilter i{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #DEEBFF;
+    border-radius: 20px;
+    width: 45px;
+    margin: -2px;
+    color: #0065FC;
+}
+
+.nameFilter{
+    font-weight: 700;
+    font-size: 1em;
+    margin: 0 1rem;
+}
+
+
+/** ECRAN WIDTH SUPERIEUR A 1024px */ 
+
+@media only screen and (min-width: 960px){
+
+    /* Navigation */
+    .nav{
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .nav ul
+    {   
+        margin : 0;
+    }
+
+    .nav.active.on {
+        border-top: 3px #0065FC solid;  
+    }
+
+    .nav.active.on a{
+        color: #0065FC;    
+    }
+
+    .nav.active.off {
+        border-top: 3px #ffffff solid;  
+    }
+
+    .nav.active.off a {
+        color: #000000;  
+    }
+    
+    .nav.active.off:active {
+        border-top: 3px #0065FC solid;
+        color: #0065FC;  
+    }
+
+    .nav.active.off a:active {
+        color: #0065FC;  
+    }
+
+}
+
+
+/** ECRAN MOBILE INFERIEUR A 767px */
+@media only screen and (max-width: 767px){
+
+    /* header */
+    .header{
+        display: block;
+    }
+
+    #main_wrapper{
+        position: relative;
+        top: 60px;
+        width: 90%;
+    }
+
+    #logo{
+        margin: 1em;
+    }
+
+    /* Navigation */
+    .nav ul
+    {   
+        padding : 0;
+        height: 20px;
+    }
+
+    .nav li
+    {   
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav.active.on {
+        border-bottom: 3px #0065FC solid;  
+    }
+
+    .nav.active.on a {
+        color: #0065FC;  
+    }
+
+    .nav.active.off {
+        border-bottom: 3px #F2F2F2 solid;  
+    }
+   
+    .nav.active.off:active {
+        border-bottom: 3px #0065FC solid;
+    }
+
+    .nav.active.off a:active {
+        color: #0065FC;  
+    }
+
+    .nav.active.off a {
+        color: #0065FC;  
+    }
+
+    .inscription{
+        position: absolute;
+        top: 15px;
+        right: 0;
+        font-weight: 700;
+        color:#0065FC;
+        padding: 1.1em;
+    }
+
+    h1{
+        font-size: 23px;
+    }
+
+
+    .submitForm{
+        display: none;
+        width: 60px;
+    }
+
+    .submitForm.Mobile{
+        display: block;
+    }
+
+    /* block filtres */
+    .filtres{
+        display: block;
+    }
+
+
+
+    .row.threeFilter{
+        display: block;
+        width: 100%;
+    }
+
+    .row.threeFilter{
+        display: block;
+        width: 100%;
+    }
+    
+
+    .btnFilter{
+        margin-bottom: 20px;
+    }
+
+
+    .btnFilter.rom{
+        width: 50%;
+    }
+
+    .btnFilter.ani{
+        width: 70%;
+    }
+
+}
+
+/** CAS SPECIFIQUE ECRAN MOBILE WIDTH INFERIEUR A 350px */
+@media only screen and (max-width: 350px){
+    .row.twoFilter{
+        display: block;
+        align-items: center;        
+    }   
+
+    .btnFilter.fam{
+        width: 50%;
+    }
+
+    .btnFilter.eco{
+        width: 60%;
+    }
+
+    .btnFilter.rom{
+        width: 60%;
+    }
+
+    .btnFilter.ani{
+        width: 80%;
+    }
+}
+
+
+/* TABLETTE */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    
+    /* header */
+    .header{
+        display: block;
+    }
+
+    #main_wrapper{
+        position: relative;
+        top: 60px;
+        width: 95%;
+    }
+
+    #logo{
+        margin: 1em;
+    }
+
+    /* Navigation */
+    .nav ul
+    {   
+        padding : 0;
+        height: 20px;
+    }
+
+    .nav li
+    {   
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav.active.on {
+        border-bottom: 3px #0065FC solid;  
+    }
+
+    .nav.active.on a {
+        color: #0065FC;  
+    }
+
+    .nav.active.off {
+        border-bottom: 3px #F2F2F2 solid;  
+    }
+
+    .nav.active.off:active {
+        border-bottom: 3px #0065FC solid;
+    }
+
+    .nav.active.off a:active {
+        color: #0065FC;  
+    }
+
+    .nav.active.off a {
+        color: #0065FC;  
+    }
+
+    .inscription{
+        position: absolute;
+        top: 15px;
+        right: 0;
+        font-weight: 700;
+        color:#0065FC;
+        padding: 1.1em;
+    }
+
+    h1{
+        font-size: 23px;
+    }
+
+    /* FILTRES */
+    .filtres{
+        flex-wrap: wrap;
+    }
+}
