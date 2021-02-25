@@ -8,10 +8,14 @@
         <link rel="stylesheet" href="css/fontawesome.min.css">
     </head>
     <body>
+<!-- EN-TETE -->
         <header>
-                <div class="header">
-                    <div id="logo">            
-                        <img src="logo/Reservia.svg" alt="Logo réservia" /> 
+                <div class="mobileNavigation">
+                    <div class="container">
+                        <div id="logo">            
+                            <img src="images/logo/Reservia.svg" alt="Logo réservia" /> 
+                            <a href="#" >S'inscrire</a>
+                        </div>
                     </div>
                     <nav class="nav">
                         <ul class="menu">
@@ -19,61 +23,77 @@
                             <li class="nav active off"><a href="#">Activités</a></li>
                         </ul>
                     </nav>
-                    <div class="inscription">
-                        <a href="#" >S'inscrire</a>
-                    </div> 
-                </div>  
+                </div>             
+               
+                <div class="container">
+                    <div class="navigation">
+                        <div id="logo">            
+                            <img src="images/logo/Reservia.svg" alt="Logo réservia" /> 
+                        </div>
+                    
+                        <nav class="nav">
+                            <ul class="menu">
+                                <li class="nav active on"><a href="#">Hébergements</a></li>
+                                <li class="nav active off"><a href="#">Activités</a></li>
+                            </ul>
+                        </nav>
+                        <div></div>
+                        <a class="inscription" href="#" >S'inscrire</a>
+                    </div>
+                </div>              
         </header>
 <!-- CONTENU -->
-    <main id="main_wrapper">
-<!--SECTION RECHERCHE ET FILTRES -->       
-        <section>
-            <h1>Trouvez-votre herbergement pour des vacances de rêve</h1>
-            <p>
-                En plein centre ville ou en plein rue
-            </p>
-            <form action="/action_page.php" method="POST">
-                <div class="icon_mapMarker"><i class="fas fa-map-marker-alt"></i></div>
-                <input type="text" id="search" name="search" class="inputSearch" value="Marseille, France">
-                <input type="submit" class="submitForm" value="Rechercher">
-                <button type="submit" class="submitForm Mobile"><i class="fas fa-search"></i></button>
-            </form>
-            <div class="filtres">
-                <h2>Filtres</h2>
-                <div class="row twoFilter">
-                    <div class="btnFilter eco">
-                        <i class="fas fa-money-bill-wave"></i>
-                        <span class="nameFilter">
-                            Economique
-                        </span> 
+        <main>
+            <div class="container">
+                <h2>Trouvez-votre herbergement pour des vacances de rêve</h2>
+                <p>
+                    En plein centre ville ou en plein rue
+                </p>
+                <form action="/action_page.php" method="POST">
+                    <div class="icon_mapMarker"><i class="fas fa-map-marker-alt"></i></div>
+                    <input type="text" id="search" name="search" class="inputSearch" value="Marseille, France">
+                    <input type="submit" class="submitForm" value="Rechercher">
+                    <button type="submit" class="submitForm Mobile"><i class="fas fa-search"></i></button>
+                </form>
+<!-- FILTRES -->
+                <div class="filtres">
+                    <h2>Filtres</h2>
+                    <div class="row twoFilter">
+                        <div class="btnFilter eco">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span class="nameFilter">
+                                Economique
+                            </span> 
+                        </div>
+                        <div class="btnFilter fam">
+                            <i class="fas fa-child"></i> 
+                            <span class="nameFilter">
+                                Familial
+                            </span>
+                        </div> 
                     </div>
-                    <div class="btnFilter fam">
-                        <i class="fas fa-child"></i> 
-                        <span class="nameFilter">
-                            Familial
-                        </span>
-                    </div> 
+                    <div class="row threeFilter">
+                        <div class="btnFilter rom">
+                            <i class="fas fa-heart"></i>
+                            <span class="nameFilter">
+                                Romantique
+                            </span> 
+                        </div>
+                        <div class="btnFilter ani">
+                            <i class="fas fa-dog"></i>
+                            <span class="nameFilter">
+                                Animaux autorisés
+                            </span> 
+                        </div>
+                    </div>      
                 </div>
-                <div class="row threeFilter">
-                    <div class="btnFilter rom">
-                        <i class="fas fa-heart"></i>
-                        <span class="nameFilter">
-                            Romantique
-                        </span> 
+                <div class="result">
+                    <div class="infoIcon">
+                        <i class="fas fa-info"></i>
                     </div>
-                    <div class="btnFilter ani">
-                        <i class="fas fa-dog"></i>
-                        <span class="nameFilter">
-                            Animaux autorisés
-                        </span> 
-                    </div>
-                </div>      
+                    <span>Plus de 500 logements sont disponibles dans cette ville.</span>
+                </div>
             </div>
-            <div class="result">
-                <i class="fas fa-info"></i>
-                <span>Plus de 500 logements sont disponibles dans cette ville.</span>
-            </div>
-        </section>
-    </main>
+        </main>
     </body>
 </html>
