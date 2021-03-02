@@ -14,59 +14,14 @@ body{
     font-family: "Raleway", "Sans serif";
 }
 
-/* Header */
-.header{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    max-width: 1300px;
-    margin: auto;
-}
-
-#main_wrapper{
-    width: 100%;
-    max-width: 1300px;
-    margin: auto;
-}
-
-
-/* Navigation */
-.nav ul
-{   
-    list-style-type: none;
-    display: flex;
-}
-
-.nav li
-{   
-    font-weight: 500;
-    padding: 2em;
-}
-
-/* bouton s'inscrire */
-
-.inscription{
-    font-weight: 700;
-    padding: 2em;
-}
-
-.inscription:hover {
-    color:#0065FC;
-}
-
-a{
-    text-decoration: none;
-}
-
 /* FORMULAIRE */
 form{
     display: flex;
-    height: 45px;
-    margin-bottom: 20px;
+    width: 100%;
 }
 
 .icon_mapMarker{
-    width: 45px;
+    height : inherit;
     display: flex;
     font-size: 1.5rem;
     justify-content: center;
@@ -80,49 +35,30 @@ form{
     font-weight: 700;
     font-size: 1em;
     padding-left: 10px;
-    width: 200px;
+    height: 45px;
 }
 
 .submitForm{ 
+    display: block;
     background-color: #0065FC;
     border: 1px solid #0065FC;
     border-radius: 0px 10px 10px 0px;
     color: #ffffff;
     font-weight: 500;
     font-size: 1em;
-    width: 110px;
 }
 
 .submitForm.Mobile{
     display: none;
 }
 
-/*Bouton filtres*/
-.filtres{
-    display: flex;
-    margin-bottom: 10px;
-    align-items: center;
-}
-
-.row.twoFilter{
-    display: flex;
-}
-
-.row.threeFilter{
-    display: flex;
-}
-
-.filtres h2{
-    margin-right: 30px;
-}
-
+/* BLOCK FILTRE */
 .btnFilter{
     background-color: #ffffff;
     border: 2px solid #F2F2F2;
     border-radius: 20px;
     display: flex;
     align-items: center;
-    margin-right: 20px;
     cursor: pointer;
 }
 
@@ -133,38 +69,369 @@ form{
 }
 
 .btnFilter i{
-    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #DEEBFF;
     border-radius: 20px;
-    width: 45px;
     margin: -2px;
     color: #0065FC;
+    width: 40px;
+    height: 40px;
 }
 
+
 .nameFilter{
-    font-weight: 700;
+    font-weight: bold;
     font-size: 1em;
     margin: 0 1rem;
 }
 
+.result{
+    display: flex;
+}
 
-/** ECRAN WIDTH SUPERIEUR A 1024px */ 
+.infoIcon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0065FC;
+    border-radius: 20px;
+    border: 2px solid #F2F2F2;
+}
 
-@media only screen and (min-width: 960px){
 
-    /* Navigation */
+a{
+    text-decoration: none;
+}
+
+/** ECRAN MOBILE INFERIEUR A 767px */
+@media only screen and (max-width: 767px){
+
+    /* header */
+    .mobileNavigation{
+        display: block;
+        width: 100%;
+    }
+
+    .navigation{
+        display: none;
+    }
+
+    .container{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #logo{
+        position: relative;
+        top : 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #logo a{
+        font-weight: bold;
+        color:#0065FC;
+    }
+
+    /* navigation */
+    .nav{
+        margin: 1em 0 0 0;
+        width: 100%;
+        list-style: none;
+    }
+
+    .nav ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-between ;
+        padding: 0 ;
+    }
+
+    .nav ul li{
+        width: 50%;
+        text-align: center;
+        height: 30px;
+    }
+
+
+    .nav.active.on {
+        border-bottom: 3px #0065FC solid;  
+    }
+
+    .nav.active.on a {
+        color: #0065FC;  
+        position: relative;
+        left: 7px;
+    }
+
+    .nav.active.off {
+        border-bottom: 3px #F2F2F2 solid;  
+    }
+   
+    .nav.active.off:active {
+        border-bottom: 3px #0065FC solid;
+    }
+
+    .nav.active.off a:active {
+        color: #0065FC;  
+    }
+
+    .nav.active.off a {
+        color: #0065FC; 
+    }
+
+    /* FORMULAIRE */
+    .icon_mapMarker{
+        width: 20%;
+    }
+
+    .inputSearch{
+        width: 60%;
+    }
+
+    .submitForm{ 
+        display: none;
+    }
+
+    .submitForm.Mobile{
+        display: block;
+        width: 20%;
+    }
+
+    /* block filtres */
+    .filtres{
+        display: block;
+    }
+
+    .row.twoFilter{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    .row.threeFilter{
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+
+    .btnFilter.rom{
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    .btnFilter.ani{
+        width: 65%;
+        margin-bottom: 20px;
+    }
+
+    .nameFilter {
+        margin: 0 1rem;
+    }
+
+    .infoIcon{
+        font-size: 0.7em;
+        margin: 0 0.5rem 0  0;
+        width: 30px;
+        height: 20px;
+    }
+
+}
+
+/** CAS SPECIFIQUE ECRAN MOBILE INFERIEUR A 350px */
+@media only screen and (max-width: 350px){
+    .btnFilter.eco .nameFilter {
+        margin: 0 0.5rem;
+    }
+
+    .btnFilter.rom{
+        width: 60%;
+    }
+
+    .btnFilter.ani{
+        width: 75%;
+    }
+
+}
+
+
+/* TABLETTE */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+    
+    /* header */
+    .mobileNavigation{
+        display: block;
+        width: 100%;
+    }
+
+    .navigation{
+        display: none;
+    }
+
+    .container{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #logo{
+        position: relative;
+        top : 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #logo a{
+        font-weight: bold;
+        color:#0065FC;
+    }
+
+    /* navigation */
+    .nav{
+        margin: 1em 0 0 0;
+        width: 100%;
+        list-style: none;
+    }
+
+    .nav ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-between ;
+        padding: 0 ;
+    }
+
+    .nav ul li{
+        width: 50%;
+        text-align: center;
+        height: 30px;
+    }
+
+
+    .nav.active.on {
+        border-bottom: 3px #0065FC solid;  
+    }
+
+    .nav.active.on a {
+        color: #0065FC;  
+        position: relative;
+        left: 7px;
+    }
+
+    .nav.active.off {
+        border-bottom: 3px #F2F2F2 solid;  
+    }
+   
+    .nav.active.off:active {
+        border-bottom: 3px #0065FC solid;
+    }
+
+    .nav.active.off a:active {
+        color: #0065FC;  
+    }
+
+    .nav.active.off a {
+        color: #0065FC; 
+    }
+
+    /* FORMULAIRE */
+    .icon_mapMarker{
+        width: 10%;
+    }
+
+    .inputSearch{
+        width: 30%;
+    }
+
+    .submitForm{ 
+        display: none;
+    }
+
+    .submitForm.Mobile{
+        display: block;
+        width: 10%;
+    }
+
+
+     /* block filtres */
+     .filtres{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+
+    .row.twoFilter{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 60%;
+    }
+
+    .row.threeFilter{
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .btnFilter{
+        margin-right: 20px;
+    }
+
+    .result{
+        align-items: center;
+    }
+
+    .infoIcon{
+        font-size: 0.7em;
+        margin: 0 1rem 0  0;
+        width: 30px;
+        height: 30px;
+    }
+
+}
+
+/* desktop */
+@media only screen and (min-width: 1025px){
+    /* header */
+    .mobileNavigation{
+        display: none;
+        width: 100%;
+    }
+
+    .container{
+        max-width: 90%;
+        margin: auto;
+    }
+
+    /* NAVIGATION */
+    .navigation{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
     .nav{
         display: flex;
         width: 100%;
         justify-content: flex-end;
     }
 
-    .nav ul
-    {   
-        margin : 0;
+    .nav ul{
+        display: flex;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+    }
+
+    .nav li{   
+    font-weight: 500;
+    padding: 3em;
     }
 
     .nav.active.on {
@@ -192,215 +459,61 @@ form{
         color: #0065FC;  
     }
 
-}
-
-
-/** ECRAN MOBILE INFERIEUR A 767px */
-@media only screen and (max-width: 767px){
-
-    /* header */
-    .header{
-        display: block;
-    }
-
-    #main_wrapper{
-        position: relative;
-        top: 60px;
-        width: 90%;
-    }
-
-    #logo{
-        margin: 1em;
-    }
-
-    /* Navigation */
-    .nav ul
-    {   
-        padding : 0;
-        height: 20px;
-    }
-
-    .nav li
-    {   
-        text-align: center;
-        width: 100%;
-    }
-
-    .nav.active.on {
-        border-bottom: 3px #0065FC solid;  
-    }
-
-    .nav.active.on a {
-        color: #0065FC;  
-    }
-
-    .nav.active.off {
-        border-bottom: 3px #F2F2F2 solid;  
-    }
-   
-    .nav.active.off:active {
-        border-bottom: 3px #0065FC solid;
-    }
-
-    .nav.active.off a:active {
-        color: #0065FC;  
-    }
-
-    .nav.active.off a {
-        color: #0065FC;  
-    }
-
     .inscription{
-        position: absolute;
-        top: 15px;
-        right: 0;
-        font-weight: 700;
+        padding: 2em;
+        font-weight: bold;
         color:#0065FC;
-        padding: 1.1em;
     }
 
-    h1{
-        font-size: 23px;
+    /* FORMULAIRE */
+    .icon_mapMarker{
+        width: 5%;
     }
 
+    .inputSearch{
+        width: 15%;
+        padding-left: 20px;
+    }
 
-    .submitForm{
-        display: none;
-        width: 60px;
+    .submitForm{ 
+        display: block;
+        width: 10%;
     }
 
     .submitForm.Mobile{
-        display: block;
+        display: none;
     }
 
-    /* block filtres */
+    /* BLOCK FILTRE */
     .filtres{
-        display: block;
+        display: flex;
+        align-items: center;
+        margin: 20px 0px 20px 0px;
     }
 
-
+    .row.twoFilter{
+        display: flex;
+        align-items: center;
+    }
 
     .row.threeFilter{
-        display: block;
-        width: 100%;
+        display: flex;
+        align-items: center;
     }
-
-    .row.threeFilter{
-        display: block;
-        width: 100%;
-    }
-    
 
     .btnFilter{
-        margin-bottom: 20px;
+        margin: 0px 0px 0px 30px;
     }
 
-
-    .btnFilter.rom{
-        width: 50%;
+    .result{
+        align-items: center;
     }
 
-    .btnFilter.ani{
-        width: 70%;
+    .infoIcon{
+        font-size: 0.7em;
+        margin: 0 1rem 0  0;
+        width: 30px;
+        height: 30px;
     }
 
-}
-
-/** CAS SPECIFIQUE ECRAN MOBILE WIDTH INFERIEUR A 350px */
-@media only screen and (max-width: 350px){
-    .row.twoFilter{
-        display: block;
-        align-items: center;        
-    }   
-
-    .btnFilter.fam{
-        width: 50%;
-    }
-
-    .btnFilter.eco{
-        width: 60%;
-    }
-
-    .btnFilter.rom{
-        width: 60%;
-    }
-
-    .btnFilter.ani{
-        width: 80%;
-    }
-}
-
-
-/* TABLETTE */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    
-    /* header */
-    .header{
-        display: block;
-    }
-
-    #main_wrapper{
-        position: relative;
-        top: 60px;
-        width: 95%;
-    }
-
-    #logo{
-        margin: 1em;
-    }
-
-    /* Navigation */
-    .nav ul
-    {   
-        padding : 0;
-        height: 20px;
-    }
-
-    .nav li
-    {   
-        text-align: center;
-        width: 100%;
-    }
-
-    .nav.active.on {
-        border-bottom: 3px #0065FC solid;  
-    }
-
-    .nav.active.on a {
-        color: #0065FC;  
-    }
-
-    .nav.active.off {
-        border-bottom: 3px #F2F2F2 solid;  
-    }
-
-    .nav.active.off:active {
-        border-bottom: 3px #0065FC solid;
-    }
-
-    .nav.active.off a:active {
-        color: #0065FC;  
-    }
-
-    .nav.active.off a {
-        color: #0065FC;  
-    }
-
-    .inscription{
-        position: absolute;
-        top: 15px;
-        right: 0;
-        font-weight: 700;
-        color:#0065FC;
-        padding: 1.1em;
-    }
-
-    h1{
-        font-size: 23px;
-    }
-
-    /* FILTRES */
-    .filtres{
-        flex-wrap: wrap;
-    }
 }
