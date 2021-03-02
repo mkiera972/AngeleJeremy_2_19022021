@@ -406,6 +406,38 @@ a{
     .starArticlesPopulaires{
         height: 35%;
     }
+
+    /* ACTIVITES A MARSEILLE */
+    .articlesActivity{
+        display: block;
+    }
+
+    figure{
+        background-color: #ffffff;
+        margin: auto;
+        border-radius: 1.25rem;
+        box-shadow: 0 0 16px #0000000e;
+        transition-duration: 0.1s;
+        cursor: pointer;
+        box-sizing: border-box;
+        width: 100%;
+        height: 170px;
+        margin-bottom: 20px;
+    }
+
+    figure img{
+        width: 100%;
+        height: 120px;
+        margin: 0;
+        border-radius: 1rem 1rem 0 0;
+        object-fit: cover;
+    }
+
+    figure figcaption{
+        margin: 0.7rem 1rem;
+        font-weight: bold;
+        font-size: 15px;
+    }
 }
 
 /** CAS SPECIFIQUE ECRAN MOBILE INFERIEUR A 350px */
@@ -635,6 +667,56 @@ a{
         height: 40%;
     }
 
+    /* ACTIVITES A MARSEILLE */
+    .articlesActivity{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .one.activity{
+        width: 45%;
+    }
+
+    .two.activity{
+        width: 45%;
+    }
+    
+    figure{
+        background-color: #ffffff;
+        margin: auto;
+        border-radius: 1.25rem;
+        box-shadow: 0 0 16px #0000000e;
+        transition-duration: 0.1s;
+        cursor: pointer;
+        box-sizing: border-box;
+        width: 100%;
+        height: 170px;
+        margin-bottom: 20px;
+    }
+
+    .one.activity figure{
+        height: 360px;
+    }
+
+    figure img{
+        width: 100%;
+        height: 120px;
+        margin: 0;
+        border-radius: 1rem 1rem 0 0;
+        object-fit: cover;
+    }
+
+    .one.activity img{
+        height: 86.4%;
+    }
+
+    figure figcaption{
+        margin: 0.7rem 1rem;
+        font-weight: bold;
+        font-size: 15px;
+    }
+
 }
 
 /* desktop */
@@ -779,8 +861,8 @@ a{
     }
 
     .articlesHebergements article:hover{
-        -webkit-transform: scale(1.3);
-        transform: scale(1.3);
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
     }  
 
     .imgHebergements img{
@@ -822,8 +904,8 @@ a{
     }
 
     .articlesPopulaires article:hover{
-        -webkit-transform: scale(1.3);
-        transform: scale(1.3);
+        -webkit-transform: scale(1.07);
+        transform: scale(1.07);
     }  
 
     .titlePopulaires{
@@ -858,5 +940,64 @@ a{
     .starHebergements, .starArticlesPopulaires i{
         font-size: 12px;
     }
+
+
+    /* ACTIVITES A MARSEILLE */
+    .articlesActivity{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .one.activity{
+        width: 23%;
+    }
+
+    .two.activity{
+        width: 23%;
+    }
+    
+    figure{
+        background-color: #ffffff;
+        margin: auto;
+        border-radius: 1.25rem;
+        box-shadow: 0 0 16px #0000000e;
+        transition-duration: 0.1s;
+        cursor: pointer;
+        box-sizing: border-box;
+        width: 100%;
+        height: 170px;
+        margin-bottom: 20px; 
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+    }
+
+    .activity figure:hover{
+        -webkit-transform: scale(1.075);
+        transform: scale(1.075);
+    }  
+
+    .one.activity figure{
+        height: 360px;
+    }
+
+    figure img{
+        width: 100%;
+        height: 120px;
+        margin: 0;
+        border-radius: 1rem 1rem 0 0;
+        object-fit: cover;
+    }
+
+    .one.activity img{
+        height: 86.4%;
+    }
+
+    figure figcaption{
+        margin: 0.7rem 1rem;
+        font-weight: bold;
+        font-size: 15px;
+    }    
 
 }
