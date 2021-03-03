@@ -19,7 +19,9 @@ body{
     margin: 0 auto;
 }
 
-/* FORMULAIRE */
+/**
+* BLOC FORMULAIRE 
+*/
 form{
     display: flex;
     width: 100%;
@@ -57,7 +59,9 @@ form{
     display: none;
 }
 
-/* BLOCK FILTRE */
+/** 
+* BLOC FILTRE 
+*/
 .btnFilter{
     background-color: #ffffff;
     border: 2px solid #F2F2F2;
@@ -105,7 +109,9 @@ form{
     border: 2px solid #F2F2F2;
 }
 
-/* HERBERGEMENT A MARSEILLE */
+/**
+* BLOC HERBERGEMENT A MARSEILLE 
+*/
 .herbergement{
     background-color: #ffffff;
     margin-bottom: 20px;
@@ -141,7 +147,9 @@ form{
 }
 
 
-/* ASIDE POPULAIRES */
+/**
+* BLOC ASIDE POPULAIRES 
+*/
 section{
     padding-bottom: 20px;
 }
@@ -193,6 +201,9 @@ aside{
     color: #F2F2F2;
 }
 
+/**
+* TITRE AFFICHER PLUS
+*/
 .titleAfficherPlus a, h2{
     font-size: 1em;
     color: #000000;
@@ -206,11 +217,14 @@ p{
     color: #000000;
 }
 
-/** ECRAN MOBILE INFERIEUR A 767px */
+/** 
+* ECRAN MOBILE INFERIEUR A 767px 
+*/
 @media only screen and (max-width: 767px){
 
-    /* header */
-    /* navigation */
+    /**
+    *  BLOC HEADER ET NAVIGATION 
+    */
     .nav{
         margin-top: 1em;
         width: 100%;
@@ -293,7 +307,9 @@ p{
         font-weight: bold;
     }
 
-    /* FORMULAIRE */
+    /**
+    *  BLOCK FORMULAIRE 
+    */
     .icon_mapMarker{
         width: 20%;
     }
@@ -311,7 +327,9 @@ p{
         width: 20%;
     }
 
-    /* block filtres */
+    /**
+    *  BLOCK ARTICLES 
+    */
     .filtres{
         display: block;
     }
@@ -351,14 +369,17 @@ p{
         height: 20px;
     }
 
-    /* SECTION ARTICLES */
+    /**
+    *  SECTION ARTICLES
+    */  
     .articles{
         display: flex;
         flex-direction: column-reverse;
     }
 
-    /* HERBERGEMENT A MARSEILLE */
-
+    /**
+    *  BLOC HERBERGEMENT A MARSEILLE
+    */  
     .titleHerbergement{
         font-size: 15px;
     }
@@ -387,7 +408,9 @@ p{
         font-size: 12px;
     }
 
-    /* ASIDE POPULAIRES */
+    /**
+    *  BLOC ASIDE POPULAIRES
+    */  
     .imgArticlesPopulaires{
         width: 40%;
     }
@@ -411,7 +434,9 @@ p{
         height: 35%;
     }
 
-    /* ACTIVITES A MARSEILLE */
+    /**
+    *  BLOC ACTIVITES A MARSEILLE
+    */
     .articlesActivity{
         display: block;
     }
@@ -471,7 +496,9 @@ p{
 
 }
 
-/** CAS SPECIFIQUE ECRAN MOBILE INFERIEUR A 350px */
+/**
+* CAS SPECIFIQUE ECRAN MOBILE INFERIEUR A 350px
+*/
 @media only screen and (max-width: 350px){
     .btnFilter.eco .nameFilter {
         margin: 0 0.5rem;
@@ -494,12 +521,15 @@ p{
 }
 
 
-/* TABLETTE */
+/**
+* TABLETTES
+*/
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
 
     
-    /* header */
-    /* navigation */
+    /**
+    *  BLOC HEADER ET NAVIGATION
+    */
     .nav{
         margin-top: 1em;
         width: 100%;
@@ -582,7 +612,9 @@ p{
         font-weight: bold;
     }
 
-    /* FORMULAIRE */
+    /**
+    *  BLOC FORMULAIRE
+    */
     .icon_mapMarker{
         width: 10%;
     }
@@ -600,8 +632,9 @@ p{
         width: 10%;
     }
 
-
-     /* block filtres */
+    /**
+    *  BLOC FILTRES
+    */
      .filtres{
         display: flex;
         flex-wrap: wrap;
@@ -637,13 +670,17 @@ p{
         height: 30px;
     }
 
-    /* SECTION ARTICLES */
+    /**
+    *  BLOC SECTION ARTICLES
+    */
     .articles{
         display: flex;
         flex-direction: column-reverse;
     }
-    
-    /* HERBERGEMENT A MARSEILLE */
+
+    /**
+    *  BLOC HERBERGEMENT A MARSEILLE
+    */
     .articlesHebergements{
         display: flex;
         align-items: center;
@@ -674,7 +711,9 @@ p{
         font-size: 12px;
     }
     
-    /* ASIDE POPULAIRES */
+    /**
+    *  BLOC ASIDE POPULAIRES
+    */
     .imgArticlesPopulaires{
         width: 40%;
     }
@@ -698,7 +737,9 @@ p{
         height: 40%;
     }
 
-    /* ACTIVITES A MARSEILLE */
+    /**
+    *  BLOC ACTIVITE A MARSEILLE 
+    */
     .articlesActivity{
         display: flex;
         flex-wrap: wrap;
@@ -789,7 +830,7 @@ p{
 */
 @media only screen and (min-width: 1025px){
     /** 
-    * DEBUT BLOC HEADER
+    *  BLOC HEADER
     */
     .nav{
         max-width: 90%;
@@ -846,7 +887,7 @@ p{
     }
 
     /** 
-    * DEBUT BLOC FORMULAIRES
+    *  BLOC FORMULAIRES
     */
     .icon_mapMarker{
         width: 5%;
@@ -867,7 +908,7 @@ p{
     }
 
     /** 
-    * DEBUT BLOC FILTRES
+    *  BLOC FILTRES
     */
     .filtres{
         display: flex;
@@ -956,7 +997,7 @@ p{
     }
 
     /** 
-    * DEBUT BLOC ASIDE POPULAIRES 
+    *  BLOC ASIDE POPULAIRES 
     */
 
     .articles aside .container{
@@ -1018,7 +1059,7 @@ p{
     
 
     /** 
-    * DEBUT BLOC ACTIVITE A MARSEILLE 
+    *  BLOC ACTIVITE A MARSEILLE 
     */
     .articlesActivity{
         display: flex;
