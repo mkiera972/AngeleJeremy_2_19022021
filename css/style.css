@@ -202,6 +202,10 @@ a{
     text-decoration: none;
 }
 
+p{
+    color: #000000;
+}
+
 /** ECRAN MOBILE INFERIEUR A 767px */
 @media only screen and (max-width: 767px){
 
@@ -438,6 +442,33 @@ a{
         font-weight: bold;
         font-size: 15px;
     }
+
+    /** 
+    * BLOC FOOTER
+    */
+    footer {
+        background-color: #F2F2F2;
+        padding: 10px 0 10px 0;
+    }
+
+    footer h2{
+        margin: 2rem 0 1rem 0;
+    }
+
+    footer ul{
+        padding: 0;
+        list-style: none;
+    }
+
+    footer li{
+        margin: 1rem 0;
+        color: #000000;
+    }
+
+    footer .cols-3{
+        margin-bottom: 20px;
+    }
+
 }
 
 /** CAS SPECIFIQUE ECRAN MOBILE INFERIEUR A 350px */
@@ -717,11 +748,49 @@ a{
         font-size: 15px;
     }
 
+    /** 
+    * BLOC FOOTER
+    */
+    footer {
+        background-color: #F2F2F2;
+        padding: 10px 0 10px 0;
+    }
+
+    footer .row{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer .cols-3{
+        margin-bottom: 20px;
+        width: 30%;
+    }
+
+    footer h2{
+        margin: 2rem 0 1rem 0;
+    }
+
+    footer ul{
+        padding: 0;
+        list-style: none;
+    }
+
+    footer li{
+        margin: 1rem 0;
+        color: #000000;
+    }
+
+
+
 }
 
-/* desktop */
+/** 
+* ECRAN MIN 1025PX / DESKTOP ET PLUS
+*/
 @media only screen and (min-width: 1025px){
-    /* header */
+    /** 
+    * DEBUT BLOC HEADER
+    */
     .nav{
         max-width: 90%;
         margin: 0 auto;
@@ -776,7 +845,9 @@ a{
         color:#0065FC;
     }
 
-    /* FORMULAIRE */
+    /** 
+    * DEBUT BLOC FORMULAIRES
+    */
     .icon_mapMarker{
         width: 5%;
     }
@@ -795,7 +866,9 @@ a{
         display: none;
     }
 
-    /* BLOCK FILTRE */
+    /** 
+    * DEBUT BLOC FILTRES
+    */
     .filtres{
         display: flex;
         align-items: center;
@@ -882,7 +955,9 @@ a{
         padding: 20px 0 0 0;
     }
 
-    /* ASIDE POPULAIRES */
+    /** 
+    * DEBUT BLOC ASIDE POPULAIRES 
+    */
 
     .articles aside .container{
         margin: 0;
@@ -940,9 +1015,11 @@ a{
     .starHebergements, .starArticlesPopulaires i{
         font-size: 12px;
     }
+    
 
-
-    /* ACTIVITES A MARSEILLE */
+    /** 
+    * DEBUT BLOC ACTIVITE A MARSEILLE 
+    */
     .articlesActivity{
         display: flex;
         justify-content: space-between;
@@ -960,7 +1037,7 @@ a{
         background-color: #ffffff;
         margin: auto;
         border-radius: 1.25rem;
-        box-shadow: 0 0 16px #0000000e;
+        box-shadow: 0 0 16px #0000002e;
         transition-duration: 0.1s;
         cursor: pointer;
         box-sizing: border-box;
@@ -998,6 +1075,39 @@ a{
         margin: 0.7rem 1rem;
         font-weight: bold;
         font-size: 15px;
-    }    
+    }
+    
+    /** 
+    * BLOC FOOTER
+    */
+    footer {
+        background-color: #F2F2F2;
+        padding: 10px 0 10px 0;
+    }
+
+    footer .row{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer .cols-3{
+        margin-bottom: 20px;
+        width: 33%;
+    }
+
+    footer h2{
+        margin: 2rem 0 1rem 0;
+    }
+
+    footer ul{
+        padding: 0;
+        list-style: none;
+    }
+
+    footer li{
+        margin: 1rem 0;
+        color: #000000;
+    }
+    
 
 }
